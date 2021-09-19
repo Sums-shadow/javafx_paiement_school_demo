@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="p2" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeController">
+  
+   <stylesheets>
+        <URL value="@/style/app.css" />
+    </stylesheets>
+    <children>
+      <StackPane fx:id="root" layoutX="9.0" layoutY="9.0">
+         <children>
+            <AnchorPane id="AnchorPane" prefHeight="725.0" prefWidth="1320.0" styleClass="mainFxmlClass">
+                <stylesheets>
+                    <URL value="@/style/app.css" />
+                </stylesheets>
+               <children>
+                  <AnchorPane layoutX="-13.0" layoutY="-11.0" prefHeight="143.0" prefWidth="1320.0" style="-fx-background-color: white;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <children>
+                        <JFXComboBox fx:id="cmbfilter" focusColor="BLACK" layoutX="14.0" layoutY="56.0" prefHeight="31.0" prefWidth="189.0" />
+                        <JFXTextField fx:id="trecherche" focusColor="BLACK" layoutX="203.0" layoutY="58.0" prefHeight="29.0" prefWidth="250.0" />
+                        <ImageView fx:id="irecherche" fitHeight="43.0" fitWidth="50.0" layoutX="453.0" layoutY="50.0" onMouseClicked="#onRecherche" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="ilogo" fitHeight="107.0" fitWidth="137.0" layoutX="1138.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </AnchorPane>
+                  <Pane fx:id="pinfo" layoutX="14.0" layoutY="166.0">
+                     <children>
+                        <JFXButton fx:id="btnPaie" layoutX="863.0" layoutY="223.0" onAction="#onPaie" prefHeight="61.0" prefWidth="179.0" style="-fx-border-color: black; -fx-border-radius: 10;" text="Effectuer un paiement" />
+                        <AnchorPane layoutY="21.0" prefHeight="512.0" prefWidth="404.0" style="-fx-background-color: white; -fx-border-color: black;">
+                           <children>
+                              <AnchorPane layoutX="84.0" layoutY="-21.0" prefHeight="43.0" prefWidth="189.0" style="-fx-background-color: white; -fx-border-color: black;">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="11.0" prefHeight="21.0" prefWidth="164.0" text="Information sur l'eleve">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <Label layoutX="14.0" layoutY="63.0" text="Matricule:">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="99.0" text="Nom:">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="169.0" text="Sexe:">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="133.0" text="Prenom:">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="274.0" text="Section:">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="310.0" text="Remarque:">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="240.0" text="Niveau:">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="204.0" text="Classe:">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lclasse" layoutX="133.0" layoutY="206.0">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lniveau" layoutX="133.0" layoutY="242.0">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="133.0" layoutY="312.0" text="R.A.S">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lsection" layoutX="133.0" layoutY="276.0">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lprenom" layoutX="133.0" layoutY="135.0">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lsexe" layoutX="133.0" layoutY="171.0">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lnom" layoutX="133.0" layoutY="101.0">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lmat" layoutX="133.0" layoutY="65.0">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="431.0" layoutY="21.0" prefHeight="512.0" prefWidth="404.0" style="-fx-background-color: white; -fx-border-color: black;">
+                           <children>
+                              <AnchorPane layoutX="84.0" layoutY="-21.0" prefHeight="43.0" prefWidth="224.0" style="-fx-background-color: white; -fx-border-color: black;">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="11.0" prefHeight="21.0" prefWidth="205.0" text="Information sur le paiement">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <Label layoutX="14.0" layoutY="63.0" text="Total Frais:">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="99.0" text="Total Payer:">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="169.0" text="Date payer:" visible="false">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="133.0" text="Reste:">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lreste" layoutX="133.0" layoutY="135.0">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="ldate" layoutX="133.0" layoutY="171.0">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lpayer" layoutX="133.0" layoutY="101.0">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="ltotal" layoutX="133.0" layoutY="65.0">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pintro" layoutY="143.0" prefHeight="581.0" prefWidth="1321.0">
+                     <children>
+                        <Label contentDisplay="CENTER" layoutX="501.0" prefHeight="70.0" prefWidth="369.0" text="BIENVENUE" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="44.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="504.0" layoutY="72.0" prefHeight="31.0" prefWidth="369.0" text="Commencez par faire une recherche">
+                           <font>
+                              <Font name="System Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="iintro" fitHeight="559.0" fitWidth="935.0" layoutX="184.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pnoresult" layoutX="34.0" layoutY="186.0" prefHeight="526.0" prefWidth="1251.0">
+                     <children>
+                        <ImageView fx:id="inotfound" fitHeight="457.0" fitWidth="676.0" layoutX="43.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label layoutX="825.0" layoutY="197.0" prefHeight="43.0" prefWidth="236.0" text="AUCUN ELEVE TROUVE">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

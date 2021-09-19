@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.validation.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FraisController">
+   <children>
+      <StackPane fx:id="root" layoutX="2.0" layoutY="3.0">
+         <children>
+            <AnchorPane id="AnchorPane" prefHeight="659.0" prefWidth="1309.0" styleClass="mainFxmlClass">
+                <stylesheets>
+                    <URL value="@/style/app.css" />
+                </stylesheets>
+               <children>
+                  <VBox layoutX="-2.0" layoutY="-3.0">
+                     <children>
+                        <Pane prefHeight="95.0" prefWidth="1309.0">
+                           <children>
+                              <ImageView fx:id="ireturn" fitHeight="68.0" fitWidth="87.0" layoutX="24.0" layoutY="14.0" onMouseClicked="#onReturn" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <HBox layoutX="-2.0" layoutY="-3.0" prefHeight="607.0" prefWidth="1309.0">
+                           <children>
+                              <Pane prefHeight="643.0" prefWidth="908.0" style="-fx-background-color: #484848;">
+                                 <children>
+                                    <Pane fx:id="p2" layoutX="24.0" layoutY="21.0">
+                                       <children>
+                                          <ImageView fx:id="irecu" fitHeight="558.0" fitWidth="855.0" pickOnBounds="true" preserveRatio="true" />
+                                          <Label fx:id="lnom" layoutX="190.0" layoutY="110.0" prefHeight="41.0" prefWidth="558.0" text="Ngbowa Ezechiel">
+                                             <font>
+                                                <Font name="System Bold" size="23.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="ldate" layoutX="75.0" layoutY="229.0" prefHeight="41.0" prefWidth="558.0" text="19-09-2021">
+                                             <font>
+                                                <Font name="System Bold" size="23.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lmontant" layoutX="121.0" layoutY="169.0" prefHeight="41.0" prefWidth="558.0" text="0$">
+                                             <font>
+                                                <Font name="System Bold" size="23.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView fx:id="ilogo" fitHeight="74.0" fitWidth="87.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="659.0" prefWidth="402.0">
+                                 <children>
+                                    <Label layoutX="26.0" layoutY="175.0" text="Montant Total:">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="ltotal" layoutX="152.0" layoutY="175.0" text="250$">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lreste" layoutX="152.0" layoutY="200.0" text="100$">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="26.0" layoutY="200.0" text="Reste:">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="26.0" layoutY="232.0" text="Date:">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="ldate2" layoutX="152.0" layoutY="232.0" text="19-09-2021">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="tmontant" layoutX="26.0" layoutY="324.0" onInputMethodTextChanged="#onMontant" promptText="Saisir le montant" />
+                                    <JFXButton fx:id="btnValider" layoutX="26.0" layoutY="394.0" onAction="#onValider" prefHeight="41.0" prefWidth="186.0" style="-fx-border-color: black; -fx-border-radius: 10;" text="Valider le paiement" />
+                                    <Label fx:id="lerror" layoutX="28.0" layoutY="363.0" prefHeight="21.0" prefWidth="186.0" textFill="#ff3a3a">
+                                       <font>
+                                          <Font name="System Italic" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
